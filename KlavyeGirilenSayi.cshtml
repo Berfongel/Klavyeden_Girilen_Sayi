@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model KlavyeGirilenSayi
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Sayı Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(sayi => sayi.Sayi)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Hesapla" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message1</td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message2</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
